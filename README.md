@@ -4,9 +4,9 @@ A regression model for predicting traffic volume using PyCaret and its built-in 
 # Project Background
 GMetro is a government traffic operations center that aims to manage daily vehicle congestion in busy areas. Currently, traffic planning relies on static schedules and historical patterns that don’t adjust for dynamic conditions, leading to inefficient road usage.
 
-GMetro wants to build a predictive model that can predict traffic volume based on dynamic factors like weather, holidays, and rush hour patterns. Their goal is to improve resource allocation (e.g., traffic signals, lane closures, public transport dispatching) and reduce traffic congestion.
+GMetro wants to **build a predictive model that can predict traffic volume based on dynamic factors** like weather, holidays, and rush hour patterns. Their goal is to **improve resource allocation** (e.g., traffic signals, lane closures, public transport dispatching) and reduce traffic congestion.
 
-To be considered effective, the model’s predictions should be within 30% of the actual traffic volume on average. This level of accuracy would give the city enough confidence to act on the model’s forecasts and achieve their goal of smoother, data-informed traffic management.
+To be considered effective, the model’s predictions should be **within 30% of the actual traffic volume** on average. This level of accuracy would give the city enough confidence to act on the model’s forecasts and achieve their goal of smoother, data-informed traffic management.
 
 # Data Structure & Initial Checks
 
@@ -53,18 +53,18 @@ A **Voting Regressor** blending **LightGBM** and **Random Forest** was selected 
   
 ### Feature Importance:
 
-* Temperature and percentage of cloud cover were consistently the two most important features affecting the prediction of traffic volume across the two models. The rest of the features' contributions were minimal. This suggests the absence of more meaningful features than can influence and better predict traffic volume.
+* **Temperature** and **percentage of cloud cover** were consistently the two most important features affecting the prediction of traffic volume across the two models. The rest of the features' contributions were minimal. This suggests the absence of more meaningful features that can influence and better predict traffic volume.
 
-# Recommendations:
+# Recommendations
 
 Based on the insights and findings above, I would recommend GMetro to consider the following: 
 
-* Traffic volume is influenced by a lot of factors and the dataset is very limited. It lacks meaningful features that could better explain the variations. Collect additional data to provide the model with a broader, more diverse foundation for learning. This could include exact date and timestamps and other factors such as road closures, accidents, and special events.
+* Traffic volume is influenced by a lot of factors and the dataset is very limited. It lacks meaningful features that could better explain the variations. **Collect additional data** to provide the model with a broader, more diverse foundation for learning. This could include **exact dates and timestamps** and other factors such as **road closures, accidents, and special events.**
   
-* Since the model achieved the target success metric, its predictions are reliable enough for dynamic decisions such as adjusting traffic signals, deploying congestion measures, or planning transit services. It will enable GMetro to move from static traffic schedules to responsive, real-time strategies. Deploy the model in the pilot phase, keeping in mind that it works best for predicting volumes during high-traffic situations but it is not optimized for predictions on very low traffic periods.
+* Since the model achieved the target success metric, its predictions are reliable enough for dynamic decisions such as adjusting traffic signals, deploying congestion measures, or planning transit services. It will enable GMetro to move from static traffic schedules to responsive, real-time strategies. **Deploy the model in the pilot phase**, keeping in mind that it **works best for predicting volumes during high-traffic situations** but it is **not optimized for predictions on very low traffic periods.**
   
 
-# Assumptions and Caveats:
+# Assumptions and Caveats
 
 Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
 
